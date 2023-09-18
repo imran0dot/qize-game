@@ -6,8 +6,14 @@ export default {
   ],
   theme: {
     extend: {
+      colors: {
+        "primary": "#A2CD4A",
+        "secondary": "#F89A31"
+
+      },
       boxShadow: {
-        "solid": "0 15px 0px 0px #6FAD4E"
+        "green": "0 15px 0px 0px #6FAD4E",
+        "red": "0 15px 0px 0px #DC4832"
       }
     },
   },
