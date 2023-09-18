@@ -3,14 +3,20 @@ import App from "../App.jsx";
 import GameCategory from "../pages/GameCategory/GameCategory.jsx";
 
 export const router = createBrowserRouter([
-    {
-        path: "/",
-        element: <App />,
-    },
-       
-            { 
-              path:"category",
-              element:<GameCategory/>
-            },
-     
+  {
+    path: "/",
+    element: <App />,
+  },
+
+  {
+    path: "category",
+    element: <GameCategory />,
+    children: [
+      {
+        path: "/category/:name",
+        element: <>Hello Buddy</>
+      }
+    ]
+  },
+
 ]);
