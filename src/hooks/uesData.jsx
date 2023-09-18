@@ -1,6 +1,6 @@
 const uesData = () => {
     return new Promise((resolve, reject) => {
-        fetch("data.json")
+        fetch("/data.json")
             .then((res) => res.json())
             .then((data) => resolve(data))
             .catch((err) => {

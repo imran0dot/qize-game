@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "../App.jsx";
 import GameCategory from "../pages/GameCategory/GameCategory.jsx";
+import MulitpleChoices from "../pages/GameLayout/mulitpleChoices/index.jsx";
 
 export const router = createBrowserRouter([
   {
@@ -11,12 +12,10 @@ export const router = createBrowserRouter([
   {
     path: "category",
     element: <GameCategory />,
-    children: [
-      {
-        path: "/category/:name",
-        element: <>Hello Buddy</>
-      }
-    ]
   },
+  {
+    path: "/category/name",
+    element: <MulitpleChoices />
+  }
 
 ]);

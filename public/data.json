@@ -1171,7 +1171,7 @@
 				}
 			},
 			{
-				"category": "Multiple Choices one",
+				"category": "Multiple Choices",
 				"landscape": {
 					"question": {
 						"_type": "text",

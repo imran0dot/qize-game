@@ -19,7 +19,6 @@ const GameCategory = () => {
         }
     };
 
-
     useEffect(() => {
         uesData().then(data => {
             setData(data)
@@ -32,13 +31,15 @@ const GameCategory = () => {
                 {data?.questions?.category.thumb.slice(currentIndex, currentIndex + 3).map((data, index) => (
                     <div
                         key={index}
-                        // onClick={}
                         className="flex justify-center items-center flex-col cursor-pointer">
                         <img className="w-full h-auto" src={data.__text} alt={`text ${index}`} />
                         <p className="text-white text-[20px] p-[5%]">{data._name}</p>
                     </div>
                 ))}
             </div>
+
+
+            {/* Next previos Button  */}
             <div className="flex gap-3 items-center mt-10">
                 {currentIndex >= 2 && (
                     <img

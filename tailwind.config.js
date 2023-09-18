@@ -5,7 +5,11 @@ export default {
     "./src/**/*.{svelte,js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      boxShadow: {
+        "solid": "0 15px 0px 0px #6FAD4E"
+      }
+    },
   },
   plugins: [],
 }
