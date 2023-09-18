@@ -1,8 +1,8 @@
 #root {
-  max-width: 1280px;
   background-color: #107FC9;
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-items: center;
   align-items: center;
   margin: 0 auto;

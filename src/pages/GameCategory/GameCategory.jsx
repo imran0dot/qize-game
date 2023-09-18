@@ -4,11 +4,11 @@ import buttonNext from "../../assets/button_next.svg"
 import uesData from "../../hooks/uesData";
 
 const GameCategory = () => {
-    const [data, setData] = useState({})
+    const [data, setData] = useState([])
     const [currentIndex, setCurrentIndex] = useState(0); // Starting index
 
     const handleNext = () => {
-        if (currentIndex + 3 < data?.questions?.category.thumb.length) {
+        if (currentIndex + 3 < data?.length) {
             setCurrentIndex(currentIndex + 3);
         }
     };
@@ -21,14 +21,15 @@ const GameCategory = () => {
 
     useEffect(() => {
         uesData().then(data => {
-            setData(data)
+            setData(data.thumb)
         });
     }, [])
+
 
     return (
         <div className="min-h-[770px] flex justify-center  bg-[#107fc9] items-center flex-col text-center py-12">
             <div className="w-screen  flex justify-center gap-12">
-                {data?.questions?.category.thumb.slice(currentIndex, currentIndex + 3).map((data, index) => (
+                {data.slice(currentIndex, currentIndex + 3).map((data, index) => (
                     <div
                         key={index}
                         className="flex justify-center items-center flex-col cursor-pointer">
@@ -48,7 +49,7 @@ const GameCategory = () => {
                         className="px-4 py-2 cursor-pointer"
                     />
                 )}
-                {currentIndex + 2 < data?.questions?.category.thumb.length && (
+                {currentIndex + 2 < data?.length && (
                     <img
                         src={buttonNext}
                         onClick={handleNext}

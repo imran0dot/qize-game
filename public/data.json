@@ -1,26 +1,76 @@
 {
-    "questions": [
-      {
-        "category": "Geography",
-        "question": " Which shape does not fit the others? ",
-        "options": [
-          "London",
-          "Paris",
-          "Berlin",
-          "Rome"
-        ],
-        "answer": ["Paris"]
-      },
-      {
-        "category": "Geography",
-        "question": "Which is not number?",
-        "options": [
-          "999",
-          "7Eleven",
-          "Space",
-          "Sixteen"
-        ],
-        "answer": ["999", "7Eleven", "Space"]
-      }
-    ]
-  }
+  "questions": [
+    {
+      "category": "Geography",
+      "question": " Which shape does not fit the others? ",
+      "options": [
+        "London",
+        "Paris",
+        "Berlin",
+        "Rome"
+      ],
+      "answer": [
+        "Paris"
+      ]
+    },
+    {
+      "category": "Geography",
+      "question": "Which is not number?",
+      "options": [
+        "999",
+        "7Eleven",
+        "Space",
+        "Sixteen"
+      ],
+      "answer": [
+        "999",
+        "7Eleven",
+        "Space"
+      ]
+    }
+  ],
+  "thumb": [
+    {
+      "_name": "Subcategory",
+      "__text": "/src/assets/item_thumb_0.svg"
+    },
+    {
+      "_name": "Subcategory 1",
+      "_parent": "Subcategory",
+      "__text": "/src/assets/item_thumb_0.svg"
+    },
+    {
+      "_name": "Subcategory 2",
+      "_parent": "Subcategory 1",
+      "__text": "/src/assets/item_thumb_0.svg"
+    },
+    {
+      "_name": "Drag and Drop",
+      "__text": "/src/assets/item_thumb_0.svg"
+    },
+    {
+      "_name": "IQ Questions (Audio) One",
+      "__text": "/src/assets/item_thumb_1.svg"
+    },
+    {
+      "_name": "Math Questions",
+      "__text": "/src/assets/item_thumb_2.svg"
+    },
+    {
+      "_name": "Math Puzzles (Audio)",
+      "__text": "/src/assets/item_thumb_5.svg"
+    },
+    {
+      "_name": "Multiple Choices",
+      "__text": "/src/assets/item_thumb_6.svg"
+    },
+    {
+      "_name": "Video",
+      "__text": "/src/assets/item_thumb_4.svg"
+    },
+    {
+      "_name": "All",
+      "__text": "/src/assets/item_thumb_3.svg"
+    }
+  ]
+}
