@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import buttonPrev from "../../assets/button_prev.svg"
 import buttonNext from "../../assets/button_next.svg"
 import uesData from "../../hooks/uesData";
+import { Link } from "react-router-dom";
 
 const GameCategory = () => {
     const [data, setData] = useState([])
@@ -30,12 +31,13 @@ const GameCategory = () => {
         <div className="min-h-[770px] flex justify-center  bg-[#107fc9] items-center flex-col text-center py-12">
             <div className="w-screen  flex justify-center gap-12">
                 {data.slice(currentIndex, currentIndex + 3).map((data, index) => (
-                    <div
+                    <Link
                         key={index}
+                        to={data?.path}
                         className="flex justify-center items-center flex-col cursor-pointer">
                         <img className="w-full h-auto" src={data.__text} alt={`text ${index}`} />
                         <p className="text-white text-[20px] p-[5%]">{data._name}</p>
-                    </div>
+                    </Link>
                 ))}
             </div>
 

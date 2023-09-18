@@ -62,7 +62,8 @@
     },
     {
       "_name": "Multiple Choices",
-      "__text": "/src/assets/item_thumb_6.svg"
+      "__text": "/src/assets/item_thumb_6.svg",
+      "path": "/category/mulitple-choices"
     },
     {
       "_name": "Video",

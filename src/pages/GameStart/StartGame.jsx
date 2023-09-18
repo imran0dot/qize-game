@@ -53,8 +53,10 @@ const StartGame = () => {
                     <img src={startButton} alt="" />
                     </Link>
                 </div>
-                <div className="absolute top-4 right-4">
-                    <img className="w-14 cursor-pointer h-auto" onClick={toggleOption} src={!option ? buttonOption : buttonOptionClose} alt="" />
+
+
+                <div className="absolute top-20 right-20">
+                    <img className="w-14 cursor-pointer h-auto transition-all" onClick={toggleOption} src={!option ? buttonOption : buttonOptionClose} alt="" />
                     <div className={option ? "block" : "hidden"}>
                         <img className="w-14 cursor-pointer h-auto mt-4" onClick={toggleFullScreen} src={buttonFullScreen} alt="" />
                         <img onClick={toogleSound} className="w-14 cursor-pointer h-auto mt-4" src={!sound ? buttonSoundOff : buttonSoundOn} alt="" />
