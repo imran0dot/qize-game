@@ -88,7 +88,8 @@
     },
     {
       "_name": "Math Questions",
-      "__text": "/src/assets/item_thumb_2.svg"
+      "__text": "/src/assets/item_thumb_2.svg",
+      "path": "/category/math-puzzles"
     },
     {
       "_name": "Math Puzzles (Audio)",
