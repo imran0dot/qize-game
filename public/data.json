@@ -46,6 +46,21 @@
       ]
     },
     {
+      "category":"math-questions",
+      "type": "text",
+      "question": "4 + 4 - 3 = ?",
+      "relatedImg": "",
+      "options": [
+        "5",
+        "7",
+        "4",
+        "6"
+      ],
+      "answer": [
+        "5"
+      ]
+    },
+    {
       "category": "mulitple-choices",
       "type": "img",
       "question": "Which shape soes not fit the others",
