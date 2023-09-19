@@ -3,15 +3,15 @@
     {
       "category": "mulitple-choices",
       "type": "text",
-      "question": " Which shape does not fit the others? ",
+      "question": "which is the largest city in the world? ",
       "options": [
         "London",
         "Paris",
         "Berlin",
-        "Rome"
+        "Tokyo"
       ],
       "answer": [
-        "Paris"
+        "Tokyo"
       ]
     },
     {
@@ -33,7 +33,7 @@
     {
       "category": "mulitple-choices",
       "type": "img",
-      "question": "Which is not number?",
+      "question": "Which shape soes not fit the others",
       "options": [
         {
           "value": "1",
@@ -60,7 +60,7 @@
           "img": "/questions/shape6.svg"
         }
       ],
-      "answer": ["2", "5"]
+      "answer": ["2", "6"]
     }
   ],
   "thumb": [
@@ -83,7 +83,7 @@
       "__text": "/src/assets/item_thumb_0.svg"
     },
     {
-      "_name": "IQ Questions (Audio) One",
+      "_name": "IQ Questions (Audio)",
       "__text": "/src/assets/item_thumb_1.svg"
     },
     {

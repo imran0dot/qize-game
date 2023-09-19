@@ -8,7 +8,8 @@ export default {
     extend: {
       colors: {
         "primary": "#A2CD4A",
-        "secondary": "#F89A31"
+        "secondary": "#F89A31",
+        "primary-bg": "#3B82F6"
 
       },
       boxShadow: {
