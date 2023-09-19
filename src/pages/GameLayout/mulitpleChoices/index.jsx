@@ -53,7 +53,7 @@ const MulitpleChoices = () => {
 
 
     useEffect(() => {
-        uesData().then(responce => setData(responce.categoryData));
+        uesData("mulitple-choices").then(responce => setData(responce.categoryData));
     }, [])
 
     return (

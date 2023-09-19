@@ -31,6 +31,21 @@
       ]
     },
     {
+      "category":"math-questions",
+      "type": "text",
+      "question": "",
+      "relatedImg": "../public/questions/math_q6.svg",
+      "options": [
+        "2-1",
+        "5.2",
+        "5-1",
+        "4-2"
+      ],
+      "answer": [
+        "4-2"
+      ]
+    },
+    {
       "category": "mulitple-choices",
       "type": "img",
       "question": "Which shape soes not fit the others",
