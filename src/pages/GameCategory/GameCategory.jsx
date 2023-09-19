@@ -21,8 +21,8 @@ const GameCategory = () => {
     };
 
     useEffect(() => {
-        uesData().then(data => {
-            setData(data.thumb)
+        uesData().then(responce => {
+            setData(responce.data.thumb)
         });
     }, [])
 

@@ -28,12 +28,10 @@ const MulitpleChoices = () => {
     }
 
     const changeItem = (answer) => {
-        // ans is 2 and 5
         if (answer.length === selectItem.length) {
 
             const result = selectItem.every(element => {
                 if (element.value) {
-                    console.log("I'm from first")
                     return answer.includes(element.value);
                 }
                 else {
@@ -55,7 +53,7 @@ const MulitpleChoices = () => {
 
 
     useEffect(() => {
-        uesData().then(responce => setData(responce.questions));
+        uesData().then(responce => setData(responce.categoryData));
     }, [])
 
     return (
