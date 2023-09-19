@@ -1,7 +1,8 @@
 {
   "questions": [
     {
-      "category": "Geography",
+      "category": "mulitple-choices",
+      "type": "text",
       "question": " Which shape does not fit the others? ",
       "options": [
         "London",
@@ -14,7 +15,8 @@
       ]
     },
     {
-      "category": "Geography",
+      "category": "mulitple-choices",
+      "type": "text",
       "question": "Which is not number?",
       "options": [
         "999",
@@ -26,6 +28,22 @@
         "999",
         "7Eleven",
         "Space"
+      ]
+    },
+    {
+      "category": "mulitple-choices",
+      "type": "img",
+      "question": "Which is not number?",
+      "options": [
+        "/questions/shape1.svg",
+        "/questions/shape2.svg",
+        "/questions/shape3.svg",
+        "/questions/shape4.svg",
+        "/questions/shape6.svg"
+      ],
+      "answer": [
+        "2",
+        "5"
       ]
     }
   ],

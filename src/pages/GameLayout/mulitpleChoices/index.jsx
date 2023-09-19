@@ -10,10 +10,9 @@ const MulitpleChoices = () => {
         uesData().then(responce => setData(responce.questions));
     }, [])
 
-    const selectItemsFuntion = (option) => {
+    const selectItemsFunction = (option) => {
         if (selectItem.includes(option)) {
-            setSelectItem(selectItem.filter(item => item === option))
-            console.log(selectItem);
+            setSelectItem(selectItem.filter(item => item !== option));
         } else {
             setSelectItem((prev) => [...prev, option])
         }
@@ -23,9 +22,7 @@ const MulitpleChoices = () => {
         if (data.length - 1 > currentIndex) {
             setCurrentIndex((prev) => prev + 1)
         }
-        console.log(selectItem);
     }
-
     return (
         <div className="text-white text-8xl">
             <h1 className="font-bold">
@@ -33,18 +30,52 @@ const MulitpleChoices = () => {
             </h1>
 
             <div className="flex justify-center flex-wrap items-center gap-10 mt-10">
+
+
                 {
-                    data[currentIndex]?.options?.map((option, index) => {
+                    data[currentIndex]?.type === "text" ?
+
+                        <>
+                            {data[currentIndex]?.options?.map((option, index) =>
+
+                                <div key={index}>
+                                    <button
+                                        onClick={() => selectItemsFunction(option)}
+                                        className={`btn w-96 py-5 rounded-lg text-5xl ${selectItem.includes(option) ? "bg-secondary shadow-red" : "bg-primary shadow-green"
+                                            }`}
+                                    >
+                                        {option}
+                                    </button>
+                                </div>)}
+                        </>
+                        :
+                        <>
+                            {data[currentIndex]?.options?.map((option, index) => <div key={index}>
+                                <img src={option} alt="" />
+                            </div>)}
+                        </>
+                }
+
+                {/* {
+                    data[currentIndex]?.map((option, index) => {
+                        console.log(option);
                         return (
                             <div key={index}>
-                                <button
-                                    onClick={() => selectItemsFuntion(option)}
-
-                                    className={`btn w-96 py-5 rounded-lg  text-5xl ${selectItem.includes(option)? "bg-secondary shadow-red" : "bg-primary shadow-green"}`} >{option}</button>
+                                {option.type === "text" ? (
+                                    <button
+                                        onClick={() => selectItemsFunction(option)}
+                                        className={`btn w-96 py-5 rounded-lg text-5xl ${selectItem.includes(option) ? "bg-secondary shadow-red" : "bg-primary shadow-green"
+                                            }`}
+                                    >
+                                        {option}
+                                    </button>
+                                ) : (
+                                    <img src={option} alt="" />
+                                )}
                             </div>
                         )
                     })
-                }
+                } */}
             </div>
 
             <div>
