@@ -6,7 +6,7 @@ const MulitpleChoices = () => {
     const [data, setData] = useState([]);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [selectItem, setSelectItem] = useState([]);
-    const [score, setScore] = useState(5)
+    const [score, setScore] = useState(0)
     const [showScore, setShowScore] = useState(false);
 
 
@@ -28,14 +28,24 @@ const MulitpleChoices = () => {
     }
 
     const changeItem = (answer) => {
-        console.log(answer, selectItem);
-        if(answer.length === selectItem.length){
-            const result = answer.every(element=> {
-                return selectItem.includes(element);
+        // ans is 2 and 5
+        if (answer.length === selectItem.length) {
+
+            const result = selectItem.every(element => {
+                if (element.value) {
+                    console.log("I'm from first")
+                    return answer.includes(element.value);
+                }
+                else {
+                    return answer.includes(element);
+                }
             })
-            if(result){
+
+
+
+            if (result) {
                 setScore(prev => prev + 1)
-            }else{
+            } else {
                 console.log("ans is wrong")
             }
         }
