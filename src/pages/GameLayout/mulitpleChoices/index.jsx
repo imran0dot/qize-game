@@ -6,9 +6,6 @@ const MulitpleChoices = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [selectItem, setSelectItem] = useState([]);
 
-    useEffect(() => {
-        uesData().then(responce => setData(responce.questions));
-    }, [])
 
     const selectItemsFunction = (option) => {
         if (selectItem.includes(option)) {
@@ -23,6 +20,13 @@ const MulitpleChoices = () => {
             setCurrentIndex((prev) => prev + 1)
         }
     }
+
+
+
+    useEffect(() => {
+        uesData().then(responce => setData(responce.questions));
+    }, [])
+
     return (
         <div className="text-white text-8xl">
             <h1 className="font-bold">
@@ -51,7 +55,11 @@ const MulitpleChoices = () => {
                         :
                         <>
                             {data[currentIndex]?.options?.map((option, index) => <div key={index}>
-                                <img src={option} alt="" />
+                                <img 
+                                onClick={() => selectItemsFunction(option)}
+                                className={`${selectItem.includes(option)? "" : "opacity-40"} cursor-pointer`}
+                                
+                                src={option.img} alt="" />
                             </div>)}
                         </>
                 }

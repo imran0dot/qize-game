@@ -35,11 +35,30 @@
       "type": "img",
       "question": "Which is not number?",
       "options": [
-        "/questions/shape1.svg",
-        "/questions/shape2.svg",
-        "/questions/shape3.svg",
-        "/questions/shape4.svg",
-        "/questions/shape6.svg"
+        {
+          "value": "1",
+          "img": "/questions/shape1.svg"
+        },
+        {
+          "value": "2",
+          "img": "/questions/shape2.svg"
+        },
+        {
+          "value": "3",
+          "img": "/questions/shape3.svg"
+        },
+        {
+          "value": "4",
+          "img": "/questions/shape4.svg"
+        },
+        {
+          "value": "5",
+          "img": "/questions/shape5.svg"
+        },
+        {
+          "value": "6",
+          "img": "/questions/shape6.svg"
+        }
       ],
       "answer": [
         "2",
