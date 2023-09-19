@@ -18,13 +18,28 @@ const MulitpleChoices = () => {
         }
     }
 
-    const changeItem = () => {
+    const indexChange = () => {
         if (data.length - 1 > currentIndex) {
             setCurrentIndex((prev) => prev + 1)
+            setSelectItem([])
         } else {
             setShowScore(true);
-            setSelectItem([])
         }
+    }
+
+    const changeItem = (answer) => {
+        console.log(answer, selectItem);
+        if(answer.length === selectItem.length){
+            const result = answer.every(element=> {
+                return selectItem.includes(element);
+            })
+            if(result){
+                setScore(prev => prev + 1)
+            }else{
+                console.log("ans is wrong")
+            }
+        }
+        indexChange()
     }
 
 
@@ -35,53 +50,61 @@ const MulitpleChoices = () => {
 
     return (
 
-        showScore ? <ShowScore score={score} /> 
-        : 
-        
-        <div className="text-white text-8xl">
-            <h1 className="font-bold">
-                {data[currentIndex]?.question}
-            </h1>
+        showScore ? <ShowScore score={score} />
+            :
 
-            <div className="flex justify-center flex-wrap items-center gap-10 mt-10">
+            <div className="text-white text-8xl">
+                <h1 className="font-bold">
+                    {data[currentIndex]?.question}
+                </h1>
+
+                <div className="flex justify-center flex-wrap items-center gap-10 mt-10">
 
 
-                {
-                    data[currentIndex]?.type === "text" ?
+                    {
+                        data[currentIndex]?.type === "text" ?
 
-                        <>
-                            {data[currentIndex]?.options?.map((option, index) =>
+                            <>
+                                {data[currentIndex]?.options?.map((option, index) =>
 
-                                <div key={index}>
+                                    <div key={index}>
+                                        <button
+                                            onClick={() => selectItemsFunction(option)}
+                                            className={`btn w-96 py-5 rounded-lg text-5xl ${selectItem.includes(option) ? "bg-secondary shadow-red" : "bg-primary shadow-green"
+                                                }`}
+                                        >
+                                            {option}
+                                        </button>
+                                    </div>)}
+
+                                <div>
                                     <button
+                                        onClick={() => changeItem(data[currentIndex].answer)}
+                                        className="btn bg-[#A2CD4A] w-96 py-5 rounded-lg shadow-solid text-5xl mt-20">Done</button>
+                                </div>
+                            </>
+                            :
+                            <>
+                                {data[currentIndex]?.options?.map((option, index) => <div key={index}>
+                                    <img
                                         onClick={() => selectItemsFunction(option)}
-                                        className={`btn w-96 py-5 rounded-lg text-5xl ${selectItem.includes(option) ? "bg-secondary shadow-red" : "bg-primary shadow-green"
-                                            }`}
-                                    >
-                                        {option}
-                                    </button>
+                                        className={`${selectItem.includes(option) ? "" : "opacity-40"} cursor-pointer`}
+
+                                        src={option.img} alt="" />
                                 </div>)}
-                        </>
-                        :
-                        <>
-                            {data[currentIndex]?.options?.map((option, index) => <div key={index}>
-                                <img
-                                    onClick={() => selectItemsFunction(option)}
-                                    className={`${selectItem.includes(option) ? "" : "opacity-40"} cursor-pointer`}
 
-                                    src={option.img} alt="" />
-                            </div>)}
-                        </>
-                }
-            </div>
+                                <div>
+                                    <button
+                                        onClick={() => changeItem(data[currentIndex].answer)}
+                                        className="btn bg-[#A2CD4A] w-96 py-5 rounded-lg shadow-solid text-5xl mt-20">Done</button>
+                                </div>
+                            </>
+                    }
+                </div>
 
-            <div>
-                <button
-                    onClick={changeItem}
-                    className="btn bg-[#A2CD4A] w-96 py-5 rounded-lg shadow-solid text-5xl mt-20">Done</button>
+
             </div>
-        </div>
     );
-            }
+}
 
-    export default MulitpleChoices;
+export default MulitpleChoices;
